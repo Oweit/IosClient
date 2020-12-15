@@ -8,31 +8,47 @@
 
 import SwiftUI
 
-struct ContentView: View {
+
+
+struct Login: View {
     @State var username: String = ""
     @State var password: String = ""
+    
     
     var body: some View {
         VStack {
             Spacer()
             Image("logo")
-                .resizable().frame(width: 200.0, height: 200.0)
+                .resizable()
+                .frame(width: 200.0, height: 200.0)
             VStack {
                 HStack {
                     Image(systemName: "person").foregroundColor(.gray)
                     TextField("Brukernavn", text: $username)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
+                    
                 .scaledToFill()
                 HStack {
                     Image(systemName: "lock").foregroundColor(.gray)
-                    TextField("Passord", text: $password)
+                    SecureField("Passord", text: $password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
+                    
                 .scaledToFill()
-                Button(action: {}) {
+                Button(action: {
+                    sendCredentials(self.username, self.password)
+                }) {
                     HStack {
                         Text("Logg inn")
+                        Image(systemName: "arrow.right").foregroundColor(.gray)
+                    }
+                }
+                Button(action: {
+                    getTokenFromKeychain(self.username)
+                }) {
+                    HStack {
+                        Text("Print Token")
                         Image(systemName: "arrow.right").foregroundColor(.gray)
                     }
                 }
@@ -43,8 +59,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Login()
     }
 }

@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB31D58E2587C37B00039F1A /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31D58D2587C37B00039F1A /* UserAuth.swift */; };
 		AB33B4BC25838C4000894EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33B4BB25838C4000894EA9 /* AppDelegate.swift */; };
 		AB33B4BE25838C4000894EA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33B4BD25838C4000894EA9 /* SceneDelegate.swift */; };
-		AB33B4C025838C4000894EA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33B4BF25838C4000894EA9 /* ContentView.swift */; };
+		AB33B4C025838C4000894EA9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33B4BF25838C4000894EA9 /* Login.swift */; };
 		AB33B4C225838C4200894EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB33B4C125838C4200894EA9 /* Assets.xcassets */; };
 		AB33B4C525838C4200894EA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB33B4C425838C4200894EA9 /* Preview Assets.xcassets */; };
 		AB33B4C825838C4200894EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB33B4C625838C4200894EA9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB31D58D2587C37B00039F1A /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		AB33B4B825838C4000894EA9 /* Owe It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Owe It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB33B4BB25838C4000894EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB33B4BD25838C4000894EA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB33B4BF25838C4000894EA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB33B4BF25838C4000894EA9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		AB33B4C125838C4200894EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB33B4C425838C4200894EA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB33B4C725838C4200894EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2A84B22589133A00D1E84E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB33B4BF25838C4000894EA9 /* Login.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB31D58C2587C31300039F1A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AB31D58D2587C37B00039F1A /* UserAuth.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		AB33B4AF25838C4000894EA9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +76,8 @@
 			children = (
 				AB33B4BB25838C4000894EA9 /* AppDelegate.swift */,
 				AB33B4BD25838C4000894EA9 /* SceneDelegate.swift */,
-				AB33B4BF25838C4000894EA9 /* ContentView.swift */,
+				AB2A84B22589133A00D1E84E /* Views */,
+				AB31D58C2587C31300039F1A /* Network */,
 				AB33B4C125838C4200894EA9 /* Assets.xcassets */,
 				AB33B4C625838C4200894EA9 /* LaunchScreen.storyboard */,
 				AB33B4C925838C4200894EA9 /* Info.plist */,
@@ -148,7 +167,8 @@
 			files = (
 				AB33B4BC25838C4000894EA9 /* AppDelegate.swift in Sources */,
 				AB33B4BE25838C4000894EA9 /* SceneDelegate.swift in Sources */,
-				AB33B4C025838C4000894EA9 /* ContentView.swift in Sources */,
+				AB31D58E2587C37B00039F1A /* UserAuth.swift in Sources */,
+				AB33B4C025838C4000894EA9 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,9 +314,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jonathan.Owe-It";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Owe It";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,9 +334,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jonathan.Owe-It";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Owe It";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
