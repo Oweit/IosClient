@@ -45,7 +45,7 @@ struct Login: View {
                     }
                 }
                 Button(action: {
-                    getTokenFromKeychain(self.username)
+                    getAllInfo()
                 }) {
                     HStack {
                         Text("Print Token")

@@ -9,6 +9,10 @@
 import Foundation
 import Security
 
+struct Authentication {
+    static var token = ""
+}
+
 func sendCredentials(_ email: String, _ password: String) {
     print(email)
     print(password)
@@ -35,6 +39,7 @@ func sendCredentials(_ email: String, _ password: String) {
                 if let json = jsonResult as? [String:Any] {
                     if let accessToken = json["access"] as? String { // Note-to-self: There must be a prettier way
                         print(accessToken)
+                        Authentication.token = accessToken
                         
                         //Initialize keychain query for storing auth token in iOS Keychain
                         let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
